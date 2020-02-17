@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 
 
@@ -29,19 +30,21 @@ def getrow():
     '''
     return '%s,%sMB\n' % getram()
 
-def writerow():
+def writerow(filepath):
     ''' Write a timestamp/RAM row to the ram.csv
     '''
-    if os.path.exists('./ram.csv'):
-        with open('./ram.csv', 'a') as f:
+    filename = '%s/ram.csv' % filepath
+    if os.path.exists(filename):
+        with open(filename, 'a') as f:
             f.write(getrow())
     else:
-        print 'Creating ram.csv...'
-        with open('./ram.csv', 'w') as f:
+        print 'Creating %s...' % filename
+        with open(filename, 'w') as f:
             f.write('Timestamp,RAM\n')
             f.write(getrow())
 
 
 
 if __name__ == '__main__':
-    writerow()
+    filepath = sys.argv[1]
+    writerow(filepath)

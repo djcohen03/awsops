@@ -1,1 +1,1 @@
-python ~/awsops/getram/getram.py
+python $1/getram.py $1
