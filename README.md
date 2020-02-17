@@ -1,5 +1,5 @@
 # AWS Ops
-Some Small DevOps Scripts for AWS
+Some Small DevOps Tools for a personal AWS EC2 Instance
 
 ## RAM
 
