@@ -1,4 +1,4 @@
-# awsops
+# AWS Ops
 Some Small DevOps Scripts for AWS
 
 ## RAM
