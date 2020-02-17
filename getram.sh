@@ -1,0 +1,1 @@
+python getram.py
